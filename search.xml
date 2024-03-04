@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Tree.js（一）-安装以及建立简单的3d模型</title>
+      <link href="/2024/03/04/Tree.js%EF%BC%88%E4%B8%80%EF%BC%89-%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E5%BB%BA%E7%AB%8B%E7%AE%80%E5%8D%95%E7%9A%843d%E6%A8%A1%E5%9E%8B/"/>
+      <url>/2024/03/04/Tree.js%EF%BC%88%E4%B8%80%EF%BC%89-%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E5%BB%BA%E7%AB%8B%E7%AE%80%E5%8D%95%E7%9A%843d%E6%A8%A1%E5%9E%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Tree-js（一）-安装以及建立简单的3d模型"><a href="#Tree-js（一）-安装以及建立简单的3d模型" class="headerlink" title="Tree.js（一）-安装以及建立简单的3d模型"></a>Tree.js（一）-安装以及建立简单的3d模型</h1><blockquote><p>什么是Tree.js<br>根据Tree.js官网的解释：Tree.js 是一个jquery 插件, 提供交互式树.它是完全免费的,开源的，并根据MIT许可进行分发。Tree.js易于扩展，可定义和配置，它支持HTML和JSON数据源以及AJAX加载。<br>jsTree可以在盒子模型（内容框或边框）中正常运行，可以作为AMD模块加载，并具有用于响应式设计的内置移动主题，可以轻松自定义。它使用jQuery的事件系统，因此对树中各种事件的绑定回调是熟悉且容易的。</p></blockquote><h2 id="一、安装导入three"><a href="#一、安装导入three" class="headerlink" title="一、安装导入three"></a>一、安装导入three</h2><blockquote><p>npm–npm i three<br>pnpm–pnpm i three<br>cnpm–cnpm i three</p></blockquote><p>import * as THREE from “three”</p><h2 id="二、使用three"><a href="#二、使用three" class="headerlink" title="二、使用three"></a>二、使用three</h2><h3 id="创建场景"><a href="#创建场景" class="headerlink" title="创建场景"></a>创建场景</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const scene = new THREE.Scene();</span><br></pre></td></tr></table></figure><h3 id="创建相机"><a href="#创建相机" class="headerlink" title="创建相机"></a>创建相机</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const camera = new THREE.PerspectiveCamera(</span><br><span class="line">  45,//视角</span><br><span class="line">  window.innerWidth / window.ineerHeight,//宽高比</span><br><span class="line">  0.1,//近平面</span><br><span class="line">  1000//远平面</span><br><span class="line">  )</span><br></pre></td></tr></table></figure><h3 id="创建渲染器"><a href="#创建渲染器" class="headerlink" title="创建渲染器"></a>创建渲染器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const renderer = new Three.WebGLRenderder();</span><br><span class="line">renderer.setSize(window.innerWidth,window.ineerHeight);</span><br><span class="line">document.bpdy.appendChild(renderer.domElement);</span><br></pre></td></tr></table></figure><h3 id="创建几何体"><a href="#创建几何体" class="headerlink" title="创建几何体"></a>创建几何体</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const genmetry = new THREE.BocGenmetry(1,1,1);</span><br></pre></td></tr></table></figure><h3 id="创建材质"><a href="#创建材质" class="headerlink" title="创建材质"></a>创建材质</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const meterial = new THREE.MeshBasicMaterial(&#123;color:0x00ff00&#125;);</span><br></pre></td></tr></table></figure><h3 id="创建网格"><a href="#创建网格" class="headerlink" title="创建网格"></a>创建网格</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const cube = new THREE.Mesh(genmetry,meterial);</span><br></pre></td></tr></table></figure><h3 id="将网格添加到场景中"><a href="#将网格添加到场景中" class="headerlink" title="将网格添加到场景中"></a>将网格添加到场景中</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scene.add(cube)</span><br></pre></td></tr></table></figure><h3 id="设置相机位置"><a href="#设置相机位置" class="headerlink" title="设置相机位置"></a>设置相机位置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">camera.position.z = 5;</span><br><span class="line">camera.lookAt(0,0,0);</span><br></pre></td></tr></table></figure><h3 id="渲染"><a href="#渲染" class="headerlink" title="渲染"></a>渲染</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//渲染函数</span><br><span class="line">function animate()&#123;</span><br><span class="line">  requestAnimationFrame(animate);</span><br><span class="line">    //旋转</span><br><span class="line">    cube.rotattion.x+=0.01;</span><br><span class="line">    cube.rotattion.y+=0.01;</span><br><span class="line">    //渲染</span><br><span class="line">    renderer.render(scene,camera)</span><br><span class="line">&#125;</span><br><span class="line">animate()</span><br></pre></td></tr></table></figure><h3 id="添加世界坐标辅助器"><a href="#添加世界坐标辅助器" class="headerlink" title="添加世界坐标辅助器"></a>添加世界坐标辅助器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const axesHelper = new THREE.aAxesHelper(5); //线段的长度</span><br><span class="line">scene.add(axesHelper);</span><br></pre></td></tr></table></figure><h3 id="添加轨道控制器"><a href="#添加轨道控制器" class="headerlink" title="添加轨道控制器"></a>添加轨道控制器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//导入轨道控制器</span><br><span class="line">import &#123; OrbitControls &#125; from &quot;three/examples/jsm/controls/OrbitControls&quot;;</span><br><span class="line">let orbitControls = new OrbitControls(camera, renderer.domElement);</span><br><span class="line">//设置带阻尼的惯性</span><br><span class="line">orbitControls.enableDamping = true;</span><br><span class="line">//设置阻尼系数</span><br><span class="line">orbitControls.enableFactor = 0.1;</span><br><span class="line">//设置自动旋转</span><br><span class="line">orbitControls.autoRotate = true</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> threejs </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端技术进阶 </tag>
+            
+            <tag> threejs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>基于element开发穿梭树</title>
       <link href="/2024/02/01/%E5%9F%BA%E4%BA%8Eelement%E5%BC%80%E5%8F%91%E7%A9%BF%E6%A2%AD%E6%A0%91/"/>
       <url>/2024/02/01/%E5%9F%BA%E4%BA%8Eelement%E5%BC%80%E5%8F%91%E7%A9%BF%E6%A2%AD%E6%A0%91/</url>
@@ -312,9 +339,9 @@
             
             <tag> 前端技术进阶 </tag>
             
-            <tag> vue3 </tag>
-            
             <tag> vue </tag>
+            
+            <tag> vue3 </tag>
             
         </tags>
       
