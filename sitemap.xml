@@ -200,13 +200,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/echarts/</loc>
-    <lastmod>2024-03-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/tags/threejs/</loc>
     <lastmod>2024-03-05</lastmod>
     <changefreq>daily</changefreq>
@@ -256,6 +249,13 @@
   </url>
   
   <url>
+    <loc>http://example.com/tags/echarts/</loc>
+    <lastmod>2024-03-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/pinia/</loc>
     <lastmod>2024-03-05</lastmod>
     <changefreq>daily</changefreq>
@@ -284,14 +284,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/</loc>
+    <loc>http://example.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
     <lastmod>2024-03-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <loc>http://example.com/tags/%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2024-03-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -321,13 +321,6 @@
 
   
   <url>
-    <loc>http://example.com/categories/echarts/</loc>
-    <lastmod>2024-03-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/categories/threejs/</loc>
     <lastmod>2024-03-05</lastmod>
     <changefreq>daily</changefreq>
@@ -343,6 +336,13 @@
   
   <url>
     <loc>http://example.com/categories/vue/</loc>
+    <lastmod>2024-03-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/echarts/</loc>
     <lastmod>2024-03-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
