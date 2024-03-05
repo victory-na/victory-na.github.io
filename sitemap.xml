@@ -200,20 +200,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/threejs/</loc>
-    <lastmod>2024-03-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/echarts/</loc>
-    <lastmod>2024-03-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/tags/vue3/</loc>
     <lastmod>2024-03-05</lastmod>
     <changefreq>daily</changefreq>
@@ -249,6 +235,13 @@
   </url>
   
   <url>
+    <loc>http://example.com/tags/echarts/</loc>
+    <lastmod>2024-03-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/vue/</loc>
     <lastmod>2024-03-05</lastmod>
     <changefreq>daily</changefreq>
@@ -278,6 +271,13 @@
   
   <url>
     <loc>http://example.com/tags/js/</loc>
+    <lastmod>2024-03-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/threejs/</loc>
     <lastmod>2024-03-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -321,7 +321,7 @@
 
   
   <url>
-    <loc>http://example.com/categories/threejs/</loc>
+    <loc>http://example.com/categories/vue3/</loc>
     <lastmod>2024-03-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -329,13 +329,6 @@
   
   <url>
     <loc>http://example.com/categories/echarts/</loc>
-    <lastmod>2024-03-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/vue3/</loc>
     <lastmod>2024-03-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -357,6 +350,13 @@
   
   <url>
     <loc>http://example.com/categories/js/</loc>
+    <lastmod>2024-03-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/threejs/</loc>
     <lastmod>2024-03-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
